@@ -47,7 +47,7 @@ sub create_template {
 __DATA__
 
 @@ MyClass.pm
-package {{$c->appname}};
+package {{$self->appname}};
 use strict;
 use warnings;
 use File::Spec;
@@ -65,7 +65,7 @@ use Voson plugins => [
 
 app {
     get '/' => sub {
-        {template => 'index.html', appname => '{{$c->appname}}'};
+        {template => 'index.html', appname => '{{$self->appname}}'};
     };
 
     get '/simple' => sub { 
@@ -83,7 +83,7 @@ app {
 
 :::head1 NAME
 
-{{$c->appname}} - Web Application that powered by Voson
+{{$self->appname}} - Web Application that powered by Voson
 
 :::head1 DESCRIPTION
 
@@ -91,8 +91,8 @@ An web application
 
 :::head1 SYNOPSIS
 
-    use {{$c->appname}};
-    {{$c->appname}}->run;
+    use {{$self->appname}};
+    {{$self->appname}}->run;
 
 :::head1 AUTHOR
 
@@ -118,9 +118,9 @@ use File::Basename 'dirname';
 use lib (
     File::Spec->catdir(dirname(__FILE__), 'lib'), 
 );
-use {{$c->appname}};
+use {{$self->appname}};
 
-my $app = {{$c->appname}}->run;
+my $app = {{$self->appname}}->run;
 my $root = File::Spec->rel2abs(File::Spec->catdir(dirname(__FILE__)));
 
 builder {

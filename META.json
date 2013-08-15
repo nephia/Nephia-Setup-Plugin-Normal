@@ -55,5 +55,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/ytnobody/Voson-Setup-Plugin-Normal/issues"
+      },
+      "homepage" : "https://github.com/ytnobody/Voson-Setup-Plugin-Normal",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/ytnobody/Voson-Setup-Plugin-Normal.git",
+         "web" : "https://github.com/ytnobody/Voson-Setup-Plugin-Normal"
+      }
+   },
    "version" : "0.01"
 }
