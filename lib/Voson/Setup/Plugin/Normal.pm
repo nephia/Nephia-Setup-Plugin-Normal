@@ -20,6 +20,11 @@ sub fix_setup {
     $chain->after('CreateProject', CreateClass => \&create_class);
     $chain->after('CreateProject', CreatePSGI => \&create_psgi);
     $chain->append(CreateTemplate => \&create_template);
+
+    push @{$self->setup->deps->{requires}}, (
+        'Cache::Cache'                 => '0',
+        'Plack::Middleware::CSRFBlock' => '0',
+    );
 }
 
 sub create_class {
@@ -113,6 +118,8 @@ L<Voson>
 use strict;
 use warnings;
 use Plack::Builder;
+use Plack::Session::Store::Cache;
+use Cache::SharedMemoryCache;
 use File::Spec;
 use File::Basename 'dirname';
 use lib (
@@ -120,11 +127,25 @@ use lib (
 );
 use {{$self->appname}};
 
-my $app = {{$self->appname}}->run;
-my $root = File::Spec->rel2abs(File::Spec->catdir(dirname(__FILE__)));
+my $app           = {{$self->appname}}->run;
+my $root          = File::Spec->rel2abs(File::Spec->catdir(dirname(__FILE__)));
+my $session_cache = Cache::SharedMemoryCache->new({
+    namespace          => '{{$self->appname}}',
+    default_expires_in => 600,
+});
 
 builder {
-    enable 'Static', root => $root, path => qr{^/static/};
+    enable_if { $ENV{PLACK_ENV} =~ /^dev/ } 'StackTrace', force => 1;
+    enable 'Static', (
+        root => $root,
+        path => qr{^/static/},
+    );
+    enable 'Session', (
+        store => Plack::Session::Store::Cache->new(
+            cache => $session_cache,
+        ),
+    );
+    enable 'CSRFBlock';
     $app;
 };
 
