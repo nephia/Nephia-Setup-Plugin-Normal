@@ -1,10 +1,10 @@
 {
-   "abstract" : "Normal setup of Voson",
+   "abstract" : "Normal setup of Nephia",
    "author" : [
       "ytnobody <ytnobody@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.6.3, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Minilla/v0.6.3, CPAN::Meta::Converter version 2.132140",
    "license" : [
       "perl_5"
    ],
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Voson-Setup-Plugin-Normal",
+   "name" : "Nephia-Setup-Plugin-Normal",
    "no_index" : {
       "directory" : [
          "t",
@@ -43,10 +43,10 @@
       "runtime" : {
          "requires" : {
             "Cache::Cache" : "0",
+            "Nephia" : "0",
+            "Nephia::Setup::Plugin::Assets::Bootstrap" : "0",
+            "Nephia::Setup::Plugin::Assets::JQuery" : "0",
             "Plack::Middleware::CSRFBlock" : "0",
-            "Voson" : "0",
-            "Voson::Setup::Plugin::Assets::Bootstrap" : "0",
-            "Voson::Setup::Plugin::Assets::JQuery" : "0",
             "perl" : "5.008005"
          }
       },
@@ -59,13 +59,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/ytnobody/Voson-Setup-Plugin-Normal/issues"
+         "web" : "https://github.com/ytnobody/Nephia-Setup-Plugin-Normal/issues"
       },
-      "homepage" : "https://github.com/ytnobody/Voson-Setup-Plugin-Normal",
+      "homepage" : "https://github.com/ytnobody/Nephia-Setup-Plugin-Normal",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/ytnobody/Voson-Setup-Plugin-Normal.git",
-         "web" : "https://github.com/ytnobody/Voson-Setup-Plugin-Normal"
+         "url" : "git://github.com/ytnobody/Nephia-Setup-Plugin-Normal.git",
+         "web" : "https://github.com/ytnobody/Nephia-Setup-Plugin-Normal"
       }
    },
    "version" : "0.01"

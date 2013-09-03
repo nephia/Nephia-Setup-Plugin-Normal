@@ -23,8 +23,8 @@ my %args = (
         'Module::Build' => 0.38,
     },
 
-    name            => 'Voson-Setup-Plugin-Normal',
-    module_name     => 'Voson::Setup::Plugin::Normal',
+    name            => 'Nephia-Setup-Plugin-Normal',
+    module_name     => 'Nephia::Setup::Plugin::Normal',
     allow_pureperl => 0,
 
     script_files => [glob('script/*'), glob('bin/*')],

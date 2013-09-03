@@ -1,8 +1,8 @@
-package Voson::Setup::Plugin::Normal;
+package Nephia::Setup::Plugin::Normal;
 use 5.008005;
 use strict;
 use warnings;
-use parent 'Voson::Setup::Plugin::Minimal';
+use parent 'Nephia::Setup::Plugin::Minimal';
 use File::Spec;
 
 our $VERSION = "0.01";
@@ -59,7 +59,7 @@ use File::Spec;
 
 our $VERSION = 0.01;
 
-use Voson plugins => [
+use Nephia plugins => [
     'JSON',
     'View::MicroTemplate' => {
         include_path => [File::Spec->catdir('view')],
@@ -88,7 +88,7 @@ app {
 
 :::head1 NAME
 
-{{$self->appname}} - Web Application that powered by Voson
+{{$self->appname}} - Web Application that powered by Nephia
 
 :::head1 DESCRIPTION
 
@@ -110,7 +110,7 @@ it under the same terms as Perl itself.
 
 :::head1 SEE ALSO
 
-L<Voson>
+L<Nephia>
 
 :::cut
 
@@ -154,7 +154,7 @@ builder {
 <html>
 <head>
   <meta charset="utf-8">
-  <title>[= appname =] - powered by Voson</title>
+  <title>[= appname =] - powered by Nephia</title>
   <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
@@ -168,7 +168,7 @@ builder {
   <div class="container">
     <div class="hero-unit">
       <h1>[= appname =]</h1>
-      <p>An web-application that is empowered by Voson</p>
+      <p>An web-application that is empowered by Nephia</p>
     </div>
   </div>
   <script src="/static/js/jquery.min.js"></script>
@@ -183,7 +183,7 @@ __END__
 
 =head1 NAME
 
-Voson::Setup::Plugin::Normal - Normal setup of Voson
+Nephia::Setup::Plugin::Normal - Normal setup of Nephia
 
 =head1 DESCRIPTION
 
@@ -191,15 +191,15 @@ Normal setup plugin.
 
 =head1 SYNOPSIS
 
-    $ voson-setup YourApp --plugins Normal
+    $ nephia-setup YourApp --plugins Normal
 
 =head1 BUNDLE SETUP-PLUGINS
 
 =over 4
 
-=item L<Voson::Setup::Plugin::Assets::Bootstrap>
+=item L<Nephia::Setup::Plugin::Assets::Bootstrap>
 
-=item L<Voson::Setup::Plugin::Assets::JQuery>
+=item L<Nephia::Setup::Plugin::Assets::JQuery>
 
 =back
 
@@ -207,13 +207,13 @@ Normal setup plugin.
 
 =over 4
 
-=item L<Voson::Plugin::JSON>
+=item L<Nephia::Plugin::JSON>
 
-=item L<Voson::Plugin::View::MicroTemplate>
+=item L<Nephia::Plugin::View::MicroTemplate>
 
-=item L<Voson::Plugin::ResponseHandler>
+=item L<Nephia::Plugin::ResponseHandler>
 
-=item L<Voson::Plugin::Dispatch>
+=item L<Nephia::Plugin::Dispatch>
 
 =back
 
