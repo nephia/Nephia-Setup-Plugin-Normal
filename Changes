@@ -2,6 +2,10 @@ Revision history for Perl extension Nephia-Setup-Plugin-Normal
 
 {{$NEXT}}
 
+0.02 2013-10-05T23:24:42Z
+    - bug fix : Avoid side-effect of minil build for VERSION in skelton
+    - bug fix : remove duplicated call of "fix_setup" method
+
 0.01 2013-09-28T23:29:42Z
 
     - original version

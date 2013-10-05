@@ -5,7 +5,7 @@ use warnings;
 use parent 'Nephia::Setup::Plugin::Minimal';
 use File::Spec;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 sub bundle {
     qw/ Assets::Bootstrap Assets::JQuery /;
@@ -13,7 +13,6 @@ sub bundle {
 
 sub fix_setup {
     my $self = shift;
-    $self->SUPER::fix_setup;
     my $chain = $self->setup->action_chain;
     $chain->delete('CreateClass');
     $chain->delete('CreatePSGI');
@@ -57,7 +56,7 @@ use strict;
 use warnings;
 use File::Spec;
 
-our $VERSION = 0.01;
+our {{'$VERSION'}} = 0.01;
 
 use Nephia plugins => [
     'JSON',
