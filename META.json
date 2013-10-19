@@ -68,5 +68,8 @@
          "web" : "https://github.com/nephia/Nephia-Setup-Plugin-Normal"
       }
    },
-   "version" : "0.02"
+   "version" : "0.03",
+   "x_contributors" : [
+      "mackee <macopy123@gmail.com>"
+   ]
 }
