@@ -4,7 +4,7 @@
       "ytnobody <ytnobody@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.6.5, CPAN::Meta::Converter version 2.132510",
+   "generated_by" : "Minilla/v0.6.3, CPAN::Meta::Converter version 2.132140",
    "license" : [
       "perl_5"
    ],
@@ -64,7 +64,7 @@
       "homepage" : "https://github.com/nephia/Nephia-Setup-Plugin-Normal",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/nephia/Nephia-Setup-Plugin-Normal",
+         "url" : "git://github.com/nephia/Nephia-Setup-Plugin-Normal.git",
          "web" : "https://github.com/nephia/Nephia-Setup-Plugin-Normal"
       }
    },
