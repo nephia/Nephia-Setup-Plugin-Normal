@@ -52,7 +52,11 @@
       },
       "test" : {
          "requires" : {
+            "Cache::Cache" : "0",
             "Guard" : "0",
+            "IPC::ShareLite" : "0",
+            "Nephia::Plugin::ResponseHandler" : "0",
+            "Plack::Middleware::CSRFBlock" : "0",
             "Test::More" : "0.98"
          }
       }
