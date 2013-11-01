@@ -12,5 +12,6 @@ on 'test' => sub {
     requires 'Plack::Middleware::CSRFBlock'    => '0';
     requires 'IPC::ShareLite'                  => '0';
     requires 'Nephia::Plugin::ResponseHandler' => '0';
+    requires 'Nephia::Plugin::Dispatch'        => '0';
 };
 
