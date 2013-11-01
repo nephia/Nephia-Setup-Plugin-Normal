@@ -5,7 +5,7 @@ use warnings;
 use parent 'Nephia::Setup::Plugin::Minimal';
 use File::Spec;
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 sub bundle {
     qw/ Assets::Bootstrap Assets::JQuery /;

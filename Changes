@@ -2,6 +2,9 @@ Revision history for Perl extension Nephia-Setup-Plugin-Normal
 
 {{$NEXT}}
 
+0.04 2013-11-01T06:47:28Z
+    - add test for setup
+
 0.03 2013-10-19T06:23:34Z
     - bug fix : added some deps into cpanfile
 
